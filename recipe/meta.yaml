@@ -1,5 +1,5 @@
 {% set name = "apoc-backend" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/apoc/apoc-{{ version }}.tar.gz
-  sha256: 719c0a18e68d10392f46544028842249d109b0a7188dc8acb98c7d1615d382d4
+  sha256: 79616477c6bcc92b52b7a1d5b1325a638d6aed022659393e8c02937481b149ed
 
 build:
   noarch: python
