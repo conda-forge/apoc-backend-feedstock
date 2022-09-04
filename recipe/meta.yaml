@@ -1,5 +1,5 @@
 {% set name = "apoc-backend" %}
-{% set version = "0.8.1" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/apoc/apoc-{{ version }}.tar.gz
-  sha256: 56141cba23832c4f3143dc148fad14d94aa613a58b3aeb39e4f1f76c17fdfe5f
+  sha256: 98f7155a588d24a8d2b4019e4e3f5152966093b16a59206954f44e2554126e0b
 
 build:
   noarch: python
@@ -20,7 +20,7 @@ requirements:
     - python >=3.6
   run:
     - numpy >=1.21
-    - pyclesperanto-prototype >=0.8.0
+    - pyclesperanto-prototype >=0.18.3
     - python >=3.6
     - scikit-learn >=0.24.2
     - pandas
