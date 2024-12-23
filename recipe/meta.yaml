@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/a/apoc/apoc-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/a/apoc/apoc-{{ version }}.tar.gz
   sha256: c6e5264f2ac0420e5f8e2b23ad16927126d75280bb12f0341480ef9853973263
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - numpy >=1.21
     - pyclesperanto-prototype >=0.21.1
-    - python >=3.6
+    - python >={{ python_min }}
     - scikit-learn >=0.24.2
     - pandas
 
@@ -34,6 +34,7 @@ test:
   requires:
     - oclgrind
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/haesleinhuepf/apoc
